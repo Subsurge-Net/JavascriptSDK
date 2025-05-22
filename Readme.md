@@ -15,7 +15,7 @@ First step is to initialize the client with the required data:
 ```ts
 
 const clientSDK = new SubsurgeSDK.APIClient({
-    appId: '21a79421a7964ddcbf41222829041194', // App Id on subsurge.com
+    appId: '{{YOUR_APP_ID}}', // App Id on subsurge.com e.g 21a79421a7964ddcbf41222829041194
     // Google Client Id If you want to use Google Auth
     googleClientId: "{{YOUR Google ClientId}}", // e."920059261823-zh90m3p3hhtvrk8sk1kinuak1thjdwve.apps.googleusercontent.com",
 }); 
@@ -26,7 +26,7 @@ const clientSDK = new SubsurgeSDK.APIClient({
 ```ts
 
 const clientSDK = new SubsurgeSDK.APIClient({
-    appId: '21a79421a7964ddcbf41222829041194', // App Id on subsurge.com
+    appId: '{{YOUR_APP_ID}}', // App Id on subsurge.com e.g 21a79421a7964ddcbf41222829041194
     // On background.js, we need to use the platformName 'browser-extension' 
     platformName: 'browser-extension',
     // Auth0 Client Id & Domain If you want to use Auth0 Auth

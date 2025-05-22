@@ -171,9 +171,9 @@ export class APIClient {
     }
 }
 
-function ensureEndsWith(str: string, suffix: string): string {
+function ensureEndsWith(str: string | undefined, suffix: string): string | null {
     if (!str) {
-        return str;
+        return null;
     }
     if (!str.endsWith(suffix)) {
         return str + suffix;

@@ -3,7 +3,7 @@ import { IHttpClient } from './GenericHttpClient';
 import { IStorage } from './localStorageAPI';
 export interface ApiContext {
     httpClient?: IHttpClient;
-    baseUrl: string;
+    baseUrl?: string;
     appId: string;
     platformName?: 'browser-extension' | 'web' | 'mobile' | 'desktop';
     storage?: IStorage;

@@ -1,12 +1,4 @@
 
-export interface ProfileDto {
-  id?: string;
-  isActive?: boolean;
-  email?: string | null;
-  purchasedProducts?: Array<PurchasedProductsDto> | null;
-  currentSubscription?: SubscriptionDto;
-  readonly hasActiveSubscription?: boolean;
-}
 export interface BasicAppDto { 
   id: string; 
   name: string;
@@ -54,11 +46,13 @@ export interface DigitalPackageDto {
 export interface CurrentUserDto { 
   id?: string;
   isActive?: boolean;
+  joinDate?: Date;
   email?: string | null;
   purchasedProducts?: Array<PurchasedProductsDto> | null;
   currentSubscription?: SubscriptionDto;
   readonly hasActiveSubscription?: boolean;
 }
+
 export interface PurchasedProductsDto {
   digitalProductId: string; // Guid -> string
   quantity: number; // long -> number

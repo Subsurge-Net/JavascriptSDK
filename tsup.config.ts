@@ -9,4 +9,9 @@ export default defineConfig({
   clean: true, // clean output folder before build
   outDir: 'dist',
   minify: true,
+  outExtension({ format }) {
+    return {
+      js: format === 'esm' ? '.esm.js' : format === 'cjs' ? '.cjs.js' : '.iife.js',
+    };
+  },
 })
